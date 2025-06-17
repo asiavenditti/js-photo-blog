@@ -50,12 +50,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: -1rem;
+    padding: 1rem 0;
 }
 
-[class^="col-"] {
-    border: 2px dashed red;
-
-}
 
 img {
     max-width: 100%;
@@ -132,7 +129,7 @@ header {
 /* MAIN */
 
 main {
-    min-height: 500px;
+
     background-image: url(../img/cork.png);
 
 }
@@ -149,6 +146,7 @@ main {
 
     .card-body {
         padding-top: 0.5rem;
+        text-align: center;
     }
 
     .card-img {
@@ -164,4 +162,27 @@ main {
         width: 30px;
 
     }
+}
+
+
+/* MEDIA MD TABLET */
+
+@media screen and (max-with: 768px) {
+
+    .col-md-6 {
+        width: 50%
+    }
+}
+
+
+/* MEDIA SM SMARTPHONE */
+@media screen and (max-with: 480px) {
+
+
+
+    .col-sm-12 {
+        width: 100%
+    }
+
+
 }
