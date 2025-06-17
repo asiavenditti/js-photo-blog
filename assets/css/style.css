@@ -1,0 +1,65 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Generics */
+
+
+body {
+    font-family: sans-serif;
+}
+
+
+
+/* Utils */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+:root {
+
+    --card-darkgreen: #92c952;
+    --card-purple: #771796;
+    --card-lightgreen: #24f355;
+    --card-darkpink: #d32776;
+    --card-pink: #f66b97;
+    --card-lightblue: #56a8c2;
+
+}
+
+
+
+/* HEADER */
+
+
+header {
+    padding: 1.6rem;
+    background-image: url(../img/wall.png);
+
+    h1 {
+        font-family: "Edu TAS Beginner", cursive;
+        text-align: center;
+        font-size: 5rem;
+
+    }
+
+}
+
+/* MAIN */
+
+main {
+    height: 500px;
+    background-image: url(../img/cork.png);
+
+}
