@@ -16,6 +16,7 @@ body {
 
 
 
+
 /* Utils */
 
 .container {
@@ -24,8 +25,9 @@ body {
 }
 
 .container-sm {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
+
 }
 
 
@@ -75,6 +77,7 @@ img {
 
 .col-4 {
     width: calc(100% / 12 * 4);
+    padding: 0 1rem;
 }
 
 .col-5 {
@@ -111,7 +114,6 @@ img {
 
 
 /* HEADER */
-
 
 header {
     padding: 1.6rem;
@@ -167,21 +169,40 @@ main {
 
 /* MEDIA MD TABLET */
 
-@media screen and (max-with: 768px) {
 
+@media (max-width: 768px) {
     .col-md-6 {
-        width: 50%
+        width: 50%;
+        padding: 0 1rem;
+    }
+
+    .container-sm {
+        max-width: 90%;
+        margin: 0 auto;
+
+    }
+
+    .card {
+        width: 100%;
     }
 }
 
 
 /* MEDIA SM SMARTPHONE */
-@media screen and (max-with: 480px) {
-
+@media screen and (max-width: 480px) {
 
 
     .col-sm-12 {
-        width: 100%
+        width: 100%;
+
+
+    }
+
+
+    .container-sm {
+        max-width: 80%;
+
+
     }
 
 
