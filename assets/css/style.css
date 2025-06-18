@@ -167,6 +167,53 @@ main {
 }
 
 
+.d-none {
+
+    display: none;
+}
+
+
+#overlay {
+
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+
+    .modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        #modal-img {
+            border-radius: 20px;
+        }
+
+        #close-btn {
+
+            padding: 0.6rem 2rem;
+            background-color: var(--card-darkpink);
+            color: white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+    }
+
+
+
+}
+
+
+
 /* MEDIA MD TABLET */
 
 
@@ -186,6 +233,9 @@ main {
         width: 100%;
     }
 }
+
+
+
 
 
 /* MEDIA SM SMARTPHONE */

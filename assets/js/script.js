@@ -29,3 +29,5 @@ fetch(endpoint)
             rowEl.insertAdjacentHTML('afterbegin', cardMarkup)
         })
     })
+
+
