@@ -52,9 +52,11 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: -1rem;
+    margin: -1.5rem;
     padding: 1rem 0;
 }
+
+
 
 
 img {
@@ -79,7 +81,7 @@ img {
 
 .col-4 {
     width: calc(100% / 12 * 4);
-    padding: 0 1rem;
+
 }
 
 .col-5 {
@@ -145,8 +147,7 @@ main {
     padding: 1rem 1rem 2rem 1rem;
     background-color: white;
     position: relative;
-
-
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 
     .card-body {
         padding-top: 0.5rem;
@@ -161,12 +162,23 @@ main {
 
     .pin {
         position: absolute;
-        left: 132px;
-        top: -15px;
-        width: 30px;
-
+        top: -10px;
+        left: 50%;
+        height: 2rem;
+        width: 2rem;
+        transform: translateX(-50%)
     }
 }
+
+.card:hover {
+    transform: scale(1.02);
+    rotate: 3deg;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
 
 
 .d-none {
@@ -197,6 +209,7 @@ main {
 
         #modal-img {
             border-radius: 20px;
+            width: 50%;
 
         }
 
@@ -210,7 +223,6 @@ main {
         }
 
     }
-
 
 }
 

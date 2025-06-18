@@ -35,7 +35,6 @@ fetch(endpoint)
             // recupero gli elementi dall'html per l'overlay
 
             const overlayEl = document.getElementById('overlay')
-            const modalEl = document.querySelector('.modal')
             const buttonEl = document.getElementById('close-btn')
             const imagesEl = document.querySelectorAll('.card-img')
             const modalImg = document.getElementById('modal-img')
@@ -46,7 +45,8 @@ fetch(endpoint)
 
                 image.addEventListener('click', function () {
 
-                    imagesEl.src = modalImg.src
+                    modalImg.src = image.src
+
                     overlayEl.classList.remove('d-none')
 
                 })
