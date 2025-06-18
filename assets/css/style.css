@@ -17,6 +17,7 @@ body {
 
 
 
+
 /* Utils */
 
 .container {
@@ -58,6 +59,7 @@ body {
 
 img {
     max-width: 100%;
+    cursor: pointer;
 }
 
 
@@ -195,6 +197,7 @@ main {
 
         #modal-img {
             border-radius: 20px;
+
         }
 
         #close-btn {
@@ -207,7 +210,6 @@ main {
         }
 
     }
-
 
 
 }

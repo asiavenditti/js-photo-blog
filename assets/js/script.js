@@ -15,10 +15,13 @@ fetch(endpoint)
             const { date, title, url } = card
 
             const rowEl = document.querySelector('.row')
+
+            // preparo il markup della card 
+
             const cardMarkup = `<div class="col-4 col-md-6 col-sm-12">
-                    <div class="card">
-                        <img src="${url}" alt="yoga" class="card-img">
-                        <div class="card-body">
+            <div class="card">
+            <img src="${url}" alt="yoga" class="card-img">
+            <div class="card-body">
                         <p> ${title}</p>
                         <p> ${date}</p>
                         </div>
@@ -26,8 +29,36 @@ fetch(endpoint)
                     </div>
                 </div>`
 
+            // inserisco il markup dinamico in html 
             rowEl.insertAdjacentHTML('afterbegin', cardMarkup)
-        })
-    })
 
+            // recupero gli elementi dall'html per l'overlay
+
+            const overlayEl = document.getElementById('overlay')
+            const modalEl = document.querySelector('.modal')
+            const buttonEl = document.getElementById('close-btn')
+            const imagesEl = document.querySelectorAll('.card-img')
+            const modalImg = document.getElementById('modal-img')
+
+            // faccio un forEach per selezionare tutte le immagini, e poi scateno l'evento click per l'overlay
+
+            imagesEl.forEach((image) => {
+
+                image.addEventListener('click', function () {
+
+                    imagesEl.src = modalImg.src
+                    overlayEl.classList.remove('d-none')
+
+                })
+
+            })
+
+
+            buttonEl.addEventListener('click', function () {
+                overlayEl.classList.add('d-none');
+            })
+
+        })
+
+    })
 
