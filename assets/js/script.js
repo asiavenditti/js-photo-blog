@@ -30,35 +30,35 @@ fetch(endpoint)
                 </div>`
 
             // inserisco il markup dinamico in html 
-            rowEl.insertAdjacentHTML('afterbegin', cardMarkup)
+            rowEl.insertAdjacentHTML('beforeend', cardMarkup)
+        })
 
-            // recupero gli elementi dall'html per l'overlay
+        // recupero gli elementi dall'html per l'overlay
 
-            const overlayEl = document.getElementById('overlay')
-            const buttonEl = document.getElementById('close-btn')
-            const imagesEl = document.querySelectorAll('.card-img')
-            const modalImg = document.getElementById('modal-img')
+        const overlayEl = document.getElementById('overlay')
+        const buttonEl = document.getElementById('close-btn')
+        const imagesEl = document.querySelectorAll('.card-img')
+        const modalImg = document.getElementById('modal-img')
 
-            // faccio un forEach per selezionare tutte le immagini, e poi scateno l'evento click per l'overlay
+        // faccio un forEach per selezionare tutte le immagini, e poi scateno l'evento click per l'overlay
 
-            imagesEl.forEach((image) => {
+        imagesEl.forEach((image) => {
 
-                image.addEventListener('click', function () {
+            image.addEventListener('click', function () {
 
-                    modalImg.src = image.src
+                modalImg.src = image.src
 
-                    overlayEl.classList.remove('d-none')
+                overlayEl.classList.remove('d-none')
 
-                })
-
-            })
-
-
-            buttonEl.addEventListener('click', function () {
-                overlayEl.classList.add('d-none');
             })
 
         })
+
+
+        buttonEl.addEventListener('click', function () {
+            overlayEl.classList.add('d-none');
+        })
+
 
     })
 
