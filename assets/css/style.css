@@ -137,6 +137,7 @@ header {
 main {
 
     background-image: url(../img/cork.png);
+    height: 100%;
 
 }
 
@@ -189,6 +190,7 @@ main {
 
 #overlay {
 
+
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -197,7 +199,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
 
 
     .modal {
@@ -207,11 +209,27 @@ main {
         align-items: center;
         gap: 1rem;
 
+        .modal-viewer {
+
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
         #modal-img {
+
             border-radius: 20px;
             width: 50%;
 
         }
+
+
+        i {
+            color: var(--card-darkpink);
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
 
         #close-btn {
 
@@ -220,12 +238,24 @@ main {
             color: white;
             cursor: pointer;
             border-radius: 20px;
+            border: 1.5px solid black;
         }
 
     }
 
 }
 
+#overlay .modal-viewer i:hover {
+    color: #f32b89;
+    transition: 3s scale;
+    transform: scale(1.1);
+}
+
+#overlay .modal #close-btn:hover {
+    background-color: #f32b89;
+    transition: 3s scale;
+    transform: scale(1.05);
+}
 
 
 /* MEDIA MD TABLET */

@@ -3,6 +3,7 @@
 const endpoint = 'https://lanciweb.github.io/demo/api/pictures/'
 
 // effettuo una chiamata AJAX
+const rowEl = document.querySelector('.row')
 
 fetch(endpoint)
 
@@ -14,7 +15,6 @@ fetch(endpoint)
 
             const { date, title, url } = card
 
-            const rowEl = document.querySelector('.row')
 
             // preparo il markup della card 
 
@@ -39,19 +39,48 @@ fetch(endpoint)
         const buttonEl = document.getElementById('close-btn')
         const imagesEl = document.querySelectorAll('.card-img')
         const modalImg = document.getElementById('modal-img')
+        const arrowLeft = document.getElementById('arrow-left')
+        const arrowRight = document.getElementById('arrow-right')
 
         // faccio un forEach per selezionare tutte le immagini, e poi scateno l'evento click per l'overlay
 
-        imagesEl.forEach((image) => {
+        imagesEl.forEach((image, index) => {
 
             image.addEventListener('click', function () {
 
+
                 modalImg.src = image.src
+
+                currentIndex = index
+
 
                 overlayEl.classList.remove('d-none')
 
+
             })
 
+        })
+
+        arrowRight.addEventListener('click', function () {
+
+            currentIndex++
+
+            if (currentIndex == imagesEl.length) {
+                currentIndex
+            }
+
+            modalImg.src = imagesEl[currentIndex].src
+        })
+
+        arrowLeft.addEventListener('click', function () {
+
+            currentIndex--
+
+            if (currentIndex == 0) {
+                currentIndex
+            }
+
+            modalImg.src = imagesEl[currentIndex].src
         })
 
 
@@ -60,5 +89,6 @@ fetch(endpoint)
         })
 
 
-    })
 
+
+    })
