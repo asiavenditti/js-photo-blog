@@ -89,6 +89,12 @@ fetch(endpoint)
         })
 
 
+        document.addEventListener('keydown', function (e) {
 
+            if (e.key === 'Escape') {
+                overlayEl.classList.add('d-none');
+
+            }
+        })
 
     })
